@@ -9,7 +9,7 @@ public class OAT extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.oat_main);
+		setContentView(R.layout.main);
 	}
 
 	@Override
