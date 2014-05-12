@@ -11,9 +11,6 @@
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:shadowColor="#BDBDBD"
-        android:shadowDx="3"
-        android:shadowDy="5"
-        android:shadowRadius="10"
         android:text="OAT"
         android:textSize="38dp" />
 
