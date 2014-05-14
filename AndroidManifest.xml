@@ -22,8 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="Next1"></activity>
-        <activity android:name="Activity1"></activity>
+        <activity android:name="kch.oat.Next1" >
+        </activity>
+        <activity android:name="kch.oat.OatActivity" >
+        </activity>
+        <activity
+            android:name="kch.oat.Test"
+            android:label="@string/title_activity_test" >
+        </activity>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -27,7 +28,7 @@ public class OAT extends Activity implements View.OnClickListener{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.oat_main);
 		
 		imgPlus=(ImageButton)this.findViewById(R.id.imgPlus);
 		imgPlus.setOnClickListener(this);
@@ -35,6 +36,7 @@ public class OAT extends Activity implements View.OnClickListener{
 		imgMinus.setOnClickListener(this);
 		listSubject=(ListView)this.findViewById(R.id.listSubject);
 		btnNext=(Button)this.findViewById(R.id.btnNext);
+		btnNext.setOnClickListener(this);
 		
 		// ¾î´ðÅÍ 
 		nameData.add("°úÇÐ");
@@ -56,10 +58,16 @@ public class OAT extends Activity implements View.OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		InputDialog dial;
-		if(v==imgPlus){
-			dial=new InputDialog(this);
-			dial.show();
+		if(v==btnNext){
+			Intent intent=new Intent(OAT.this, Next1.class);
+			startActivity(intent);
+		}
+		else{
+			InputDialog dial;
+			if(v==imgPlus){
+				dial=new InputDialog(this);
+				dial.show();
+			}
 		}
 	}
 
