@@ -24,11 +24,17 @@
         </activity>
         <activity android:name="kch.oat.Next1" >
         </activity>
-        <activity android:name="kch.oat.OatActivity" >
+        <activity
+            android:name="kch.oat.OatActivity"
+            android:label="@string/title_activity_oat" >
         </activity>
         <activity
-            android:name="kch.oat.Test"
-            android:label="@string/title_activity_test" >
+            android:name="kch.oat.Next2"
+            android:label="@string/title_activity_next2" >
+        </activity>
+        <activity
+            android:name="kch.oat.OatTimeTable"
+            android:label="@string/title_activity_oat_time_table" >
         </activity>
     </application>
 
