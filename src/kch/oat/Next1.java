@@ -1,16 +1,27 @@
 package kch.oat;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
-public class Next1 extends Activity {
-
-	/** Called when the activity is first created. */
-	// 일단 추가하는 것만 했구나...
-	// 5/23일에 볼 때 다시 얘기하자...
+public class Next1 extends Activity implements Runnable{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
+	    setContentView(R.layout.next1);
+	    (new Thread(this)).start();
 	}
 
+	@Override
+	public void run() {
+		try{
+			Thread.sleep(2000);
+		}
+		catch(Exception e){}
+		
+		Intent intent=new Intent(Next1.this,OatActivity.class);
+		startActivity(intent);
+		//finish();
+		this.finish();
+	}
 }
