@@ -36,6 +36,10 @@
             android:name="kch.oat.OatTimeTable"
             android:label="@string/title_activity_oat_time_table" >
         </activity>
+        <activity
+            android:name="kch.oat.Next3"
+            android:label="@string/title_activity_next3" >
+        </activity>
     </application>
 
 </manifest>
