@@ -9,16 +9,6 @@
     tools:context=".Next3" >
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
-        android:text="Alert Dialog 생성준비중..."
-        android:textSize="20sp" />
-
-    <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,5 +16,14 @@
         android:layout_centerHorizontal="true"
         android:text="OAT"
         android:textSize="80sp" />
+
+    <Button
+        android:id="@+id/next3Show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp"
+        android:text="실행하기" />
 
 </RelativeLayout>
