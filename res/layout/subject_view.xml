@@ -10,7 +10,7 @@
         android:id="@+id/subjectTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="과학"
+        android:text=" 활동 "
         android:textSize="30sp" />
 
     <LinearLayout
