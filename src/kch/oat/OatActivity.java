@@ -40,7 +40,7 @@ public class OatActivity extends Activity implements TabHost.TabContentFactory{
 
 	@Override
 	public View createTabContent(String tag) {
-		SubjectView sv=new SubjectView(this);
+		SubjectView sv=new SubjectView(this, tag);
 		return sv;
 	}
 }
