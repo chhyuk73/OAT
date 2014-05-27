@@ -5,15 +5,20 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-public class OatActivity extends Activity implements TabHost.TabContentFactory{
+public class OatActivity extends Activity implements TabHost.TabContentFactory,View.OnClickListener{
 
+	Button activityNext;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.oat_activity);
+		
+		activityNext=(Button)this.findViewById(R.id.activityNext);
 		
 		// TabHost »ý¼º
 		TabHost tHost=(TabHost)this.findViewById(R.id.tabhost);
@@ -42,5 +47,13 @@ public class OatActivity extends Activity implements TabHost.TabContentFactory{
 	public View createTabContent(String tag) {
 		SubjectView sv=new SubjectView(this, tag);
 		return sv;
+	}
+
+	@Override
+	public void onClick(View v) {
+		if(v==activityNext){
+			Intent intent=new Intent(OatActivity.this, Next2.class);
+			startActivity(intent);
+		}
 	}
 }

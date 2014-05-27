@@ -33,10 +33,12 @@
             </HorizontalScrollView>
  
         </LinearLayout>
-        <FrameLayout 
+
+        <FrameLayout
             android:id="@android:id/tabcontent"
-            android:layout_width="fill_parent" 
-            android:layout_height="fill_parent">
+            android:layout_width="fill_parent"
+            android:layout_height="274dp" >
+
             <LinearLayout 
                 android:id="@+id/tab1"
                 android:layout_height="wrap_content" 
@@ -56,6 +58,13 @@
                 android:orientation="vertical">
             </LinearLayout>
         </FrameLayout>
+
+        <Button
+            android:id="@+id/timetableNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="다음 >" />
 
     </LinearLayout>
 
