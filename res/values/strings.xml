@@ -9,5 +9,6 @@
     <string name="title_activity_next2">Next2</string>
     <string name="title_activity_oat_time_table">OatTimeTable</string>
     <string name="title_activity_next3">Next3</string>
+    <string name="title_activity_time_table_view">TimeTableView</string>
 
 </resources>

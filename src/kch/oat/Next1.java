@@ -21,7 +21,6 @@ public class Next1 extends Activity implements Runnable{
 		
 		Intent intent=new Intent(Next1.this,OatActivity.class);
 		startActivity(intent);
-		//finish();
 		this.finish();
 	}
 }

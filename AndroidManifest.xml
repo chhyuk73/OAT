@@ -40,6 +40,10 @@
             android:name="kch.oat.Next3"
             android:label="@string/title_activity_next3" >
         </activity>
+        <activity
+            android:name="kch.oat.TimeTableView"
+            android:label="@string/title_activity_time_table_view" >
+        </activity>
     </application>
 
 </manifest>

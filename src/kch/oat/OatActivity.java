@@ -1,7 +1,7 @@
 package kch.oat;
 
 import android.os.Bundle;
-import android.app.Activity;
+import android.app.TabActivity;
 import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-public class OatActivity extends Activity implements TabHost.TabContentFactory,View.OnClickListener{
+@SuppressWarnings("deprecation")
+public class OatActivity extends TabActivity implements TabHost.TabContentFactory, View.OnClickListener{
 
 	Button activityNext;
 	
@@ -19,9 +20,10 @@ public class OatActivity extends Activity implements TabHost.TabContentFactory,V
 		setContentView(R.layout.oat_activity);
 		
 		activityNext=(Button)this.findViewById(R.id.activityNext);
+		activityNext.setOnClickListener(this);
 		
 		// TabHost »ý¼º
-		TabHost tHost=(TabHost)this.findViewById(R.id.tabhost);
+		TabHost tHost=(TabHost)this.findViewById(android.R.id.tabhost);
 		tHost.setup();
 
 		TabHost.TabSpec tSpec=tHost.newTabSpec("science");
@@ -54,6 +56,7 @@ public class OatActivity extends Activity implements TabHost.TabContentFactory,V
 		if(v==activityNext){
 			Intent intent=new Intent(OatActivity.this, Next2.class);
 			startActivity(intent);
+			this.finish();
 		}
 	}
 }

@@ -61,6 +61,7 @@ public class OAT extends Activity implements View.OnClickListener{
 		if(v==btnNext){
 			Intent intent=new Intent(OAT.this, Next1.class);
 			startActivity(intent);
+			this.finish();
 		}
 		else{
 			InputDialog dial;
