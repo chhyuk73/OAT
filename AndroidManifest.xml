@@ -44,6 +44,10 @@
             android:name="kch.oat.TimeTableView"
             android:label="@string/title_activity_time_table_view" >
         </activity>
+        <activity
+            android:name="kch.oat.OatFianal"
+            android:label="@string/title_activity_oat_fianal" >
+        </activity>
     </application>
 
 </manifest>
