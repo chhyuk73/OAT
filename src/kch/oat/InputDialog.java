@@ -9,12 +9,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class InputDialog extends Dialog implements View.OnClickListener{
-	public static String sSubject;
 	EditText edtSubject;
 	Button btnInputAdd;
+	Context mContext;
 
 	public InputDialog(Context context) {
 		super(context);
+		this.mContext = context;
 		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		this.setContentView(R.layout.input_subject);
 		
@@ -26,7 +27,10 @@ public class InputDialog extends Dialog implements View.OnClickListener{
 
 	@Override
 	public void onClick(View v) {
-		sSubject=edtSubject.getText().toString();
+		DialogResult dResult = (DialogResult)mContext;
+		if(dResult==null){
+			dResult.onDialogResult(100, -1);
+		}
 		this.dismiss();
 	}
 }
