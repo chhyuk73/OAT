@@ -17,16 +17,6 @@
         <requestFocus />
     </EditText>
 
-    <Button
-        android:id="@+id/btnInputAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/edtSubject"
-        android:layout_below="@+id/edtSubject"
-        android:layout_marginRight="74dp"
-        android:layout_marginTop="27dp"
-        android:text="추가" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,5 +24,25 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="19dp"
         android:text="과목명 입력" />
+
+    <Button
+        android:id="@+id/btnInputAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtSubject"
+        android:layout_below="@+id/edtSubject"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="18dp"
+        android:text="추가" />
+
+    <Button
+        android:id="@+id/btnInputCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnInputAdd"
+        android:layout_alignBottom="@+id/btnInputAdd"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/btnInputAdd"
+        android:text="취소" />
 
 </RelativeLayout>

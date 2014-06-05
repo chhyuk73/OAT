@@ -8,29 +8,39 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class InputDialog extends Dialog implements View.OnClickListener{
-	EditText edtSubject;
-	Button btnInputAdd;
-	Context mContext;
+public class InputDialog extends Dialog implements View.OnClickListener {
+	private EditText edtSubject;
+	private Button btnInputAdd, btnInputCancel;
+	private String mSubject;
 
 	public InputDialog(Context context) {
 		super(context);
-		this.mContext = context;
-		this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		this.setTitle("과목설정");
 		this.setContentView(R.layout.input_subject);
 		
-		edtSubject=(EditText)this.findViewById(R.id.edtSubject);
-		btnInputAdd=(Button)this.findViewById(R.id.btnInputAdd);
+		edtSubject = (EditText)findViewById(R.id.edtSubject);
+		btnInputAdd = (Button)findViewById(R.id.btnInputAdd);
+		btnInputCancel = (Button)findViewById(R.id.btnInputCancel);
 		
 		btnInputAdd.setOnClickListener(this);
+		btnInputCancel.setOnClickListener(this);
 	}
 
 	@Override
 	public void onClick(View v) {
-		DialogResult dResult = (DialogResult)mContext;
-		if(dResult==null){
-			dResult.onDialogResult(100, -1);
+		if(v==btnInputAdd){
+			mSubject = edtSubject.getText().toString();
+			dismiss();
 		}
-		this.dismiss();
+		else if(v==btnInputCancel){
+			cancel();
+		}
+	}
+	
+	/**
+	 * 과목을 호출한쪽에 넘기기 위해
+	 */
+	public String getSubject(){
+		return mSubject;
 	}
 }
