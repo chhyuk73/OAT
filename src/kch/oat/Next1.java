@@ -8,7 +8,7 @@ public class Next1 extends Activity implements Runnable{
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
-	    setContentView(R.layout.next1);
+	    setContentView(R.layout.next);
 	    (new Thread(this)).start();
 	}
 
@@ -19,7 +19,7 @@ public class Next1 extends Activity implements Runnable{
 		}
 		catch(Exception e){}
 		
-		Intent intent=new Intent(Next1.this,OatActivity.class);
+		Intent intent = new Intent(Next1.this, OatActivity.class);
 		startActivity(intent);
 		this.finish();
 	}

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background"
     android:padding="10dp" >
 
     <TextView
@@ -30,23 +31,22 @@
             android:padding="2dp"
             android:layout_marginRight="5dp" >
 
-            <ImageButton
-                android:id="@+id/imgPlus"
+            <Button
+                android:id="@+id/btnMainPlus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#00000000"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/plus" />
+                android:background="@drawable/circle_button"
+                android:text="+"
+                android:textSize="20sp" />
 
-            <ImageButton
-                android:id="@+id/imgMinus"
+            <Button
+                android:id="@+id/btnMainMinus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#00000000"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/minus" />
+                android:background="@drawable/circle_button"
+                android:text="-"
+                android:textSize="20sp"/>
+
         </LinearLayout>
 
         <ListView
@@ -71,6 +71,7 @@
             android:id="@+id/btnNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/btn"
             android:text="다음 >" />
 
     </LinearLayout>

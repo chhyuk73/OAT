@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <TabHost 
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/tabhost" 
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="@drawable/background">
+    
     <LinearLayout 
         android:orientation="vertical"
         android:layout_width="fill_parent" 
         android:layout_height="fill_parent"
         android:layout_margin="12dp">
+        
       <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -16,10 +20,12 @@
         android:text="과목설정"
         android:textSize="30sp"
         android:padding="12dp"/>
+      
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="wrap_content" 
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px">
  
             <HorizontalScrollView 
                 android:id="@+id/oatScrollView"
@@ -29,7 +35,8 @@
                     android:id="@android:id/tabs"
                     android:weightSum="2" 
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent" />
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/btn"/>
             </HorizontalScrollView>
  
         </LinearLayout>
@@ -37,7 +44,8 @@
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="fill_parent"
-            android:layout_height="274dp" >
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
 
             <LinearLayout 
                 android:id="@+id/tab1"
@@ -45,12 +53,14 @@
                 android:layout_width="fill_parent"
                 android:orientation="vertical">
             </LinearLayout>
+            
             <LinearLayout 
                 android:id="@+id/tab2"
                 android:layout_height="wrap_content" 
                 android:layout_width="fill_parent" 
                 android:orientation="vertical">
             </LinearLayout>
+            
             <LinearLayout 
                 android:id="@+id/tab3"
                 android:layout_height="wrap_content" 
@@ -64,7 +74,9 @@
             android:id="@+id/activityNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_marginTop="10px"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn"
             android:text="다음 >" />
 
     </LinearLayout>

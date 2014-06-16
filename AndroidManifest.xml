@@ -5,12 +5,12 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/oat"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -45,7 +45,7 @@
             android:label="@string/title_activity_time_table_view" >
         </activity>
         <activity
-            android:name="kch.oat.OatFianal"
+            android:name="kch.oat.OatFinal"
             android:label="@string/title_activity_oat_fianal" >
         </activity>
     </application>
